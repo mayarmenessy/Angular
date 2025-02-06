@@ -1,0 +1,15 @@
+<!--1. Add a input field which updates a property ('username') via Two-Way-Binding-->
+<div class="container mt-4">
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input 
+        id="username" 
+        [(ngModel)]="username" 
+        class="form-control" 
+        placeholder="Enter username"
+      >
+    </div>
+  
+    <p class="alert alert-info">You entered: <strong>{{ username }}</strong></p>
+  </div>
+  
