@@ -1,1 +1,27 @@
-<!--Output the username property via string interpolation (in a paragraph below the input)-->
+<!--Add a button which says 'Display Details'-->
+<div class="container mt-4">
+    <button class="btn btn-primary" (click)="toggleDetails()">
+      {{ showDetails ? 'Hide Details' : 'Display Details' }}
+    </button>
+  <!--Add a paragraph with any content of your choice (e.g. 'secret password = tuna')-->
+    <div *ngIf="showDetails" class="mt-3 p-3 border rounded bg-light">
+      <p class="mb-0">Here are some details about the content...</p>
+      <p class="text-danger fw-bold">Secret password = tuna</p>
+
+    </div>
+    <!-- Log output below the details
+     starting at the 5th log item, give all future log items (via ngStyle) and (via ngClass) -->
+  <div class="mt-3">
+    <h5>Button Click Log:</h5>
+    <ul class="list-group">
+        @for (log of clickLogs; track log) {
+          <li class="list-group-item" 
+              [ngStyle]="log >= 4 ? q2Styles : {}" 
+              [ngClass]="log >= 4 ? q2Classses : ''">
+            Click #{{ log }}
+          </li>
+        }
+      </ul>
+  </div>
+  </div>
+  
