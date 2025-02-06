@@ -9,7 +9,12 @@
         placeholder="Enter username"
       >
     </div>
-  
+    <!-- Output the username using string interpolation -->
     <p class="alert alert-info">You entered: <strong>{{ username }}</strong></p>
+    
+    <!-- Button that is disabled if username is empty -->
+  <button class="btn btn-primary" [disabled]="username === ''" (click)="onSubmit()">
+    Submit
+  </button>
   </div>
   

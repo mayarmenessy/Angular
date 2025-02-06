@@ -7,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './q1.component.scss'
 })
 export class Q1Component {
-  username: string = '';
+  username: string = ''; // Two-way bound property
+
+  onSubmit() {
+    alert(`Submitted username: ${this.username}`);
+    this.username = ''; // Reset input field after submission
+
+  }
 }
+
