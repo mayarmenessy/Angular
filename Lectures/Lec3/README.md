@@ -1,19 +1,33 @@
 # Lec3
 
 ![image](https://github.com/user-attachments/assets/fe13340a-1638-4e21-a648-3080094828f2)
+
 a. CoreComponent
+
 Handles user input and emits events (serverCreated and blueprintCreated) when a user clicks a button.
+
 It uses event binding ((click)) to trigger onAddServer() and onAddBlueprint().
+
 Data Flow:
+
 User types into the inputs.
+
 Clicks "Add Server" or "Add Blueprint".
+
 Emits an event with the entered data to the parent (AppComponent).
+
 b. ServerElementComponent
+
 Displays each server or blueprint added.
+
 Uses @Input() to receive data from AppComponent.
+
 c. AppComponent
+
 Acts as the central data manager.
+
 Stores the serverElements array, which holds all added servers/blueprints.
+
 Listens for the emitted events from CoreComponent and updates the serverElements list.
 
 Data Flow
