@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreComponent } from './core/core.component';
 import { ServerElementComponent } from './server-element/server-element.component';
+import { CourseCardComponent } from './course-card/course-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoreComponent,
-    ServerElementComponent
+    ServerElementComponent,
+    CourseCardComponent
   ],
   imports: [
     BrowserModule,
