@@ -1,0 +1,34 @@
+<div class="container mt-4">
+    <div class="card" style="width: 18rem;">
+        @if ((course.iconUrl)) {
+            <img [src]="course.iconUrl" class="card-img-top" alt="Card Image">
+
+        }
+        @else{
+            <h1>No image Found</h1>
+        }
+        <div class="card-body">
+           <!-- <h5 class="card-title" [ngClass]="course.category=='BEGINNER'? 'begginer': ''">{{course.description}}</h5> -->
+            <h5 class="card-title" [ngStyle]="{'text-decoration':'underline'}" [ngClass]="cardClasses()">{{course.description}}</h5>
+
+            <p class="card-text">{{course.description}}</p>
+            <p hclass="card-text">{{course.longDescription}}</p>
+
+            @switch (course.category) {
+                @case ('BIGENNER') {
+                    <div class="badge bg-success">BEGINNER</div>
+                }
+                @case ('INTERMEDIATE') {
+                    <div class="badge bg-primary">INTERMEDIATE</div>
+                }
+                @case ('ADVANCED') {
+                    <div class="badge bg-warning">ADVANCED</div>
+                }
+                @default {
+                    <div> No category for this course</div>
+                }
+            }
+        </div>
+        <button class="btn btn-primary"(click)="onCourseViewed()">View Course</button>
+    </div>
+</div>

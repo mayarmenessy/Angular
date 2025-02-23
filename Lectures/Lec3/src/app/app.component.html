@@ -14,3 +14,14 @@
     >
 </app-server-element>
 </div>
+<br>
+@for (course of coursess; track course.id; let index=$index; let count=$count; let first = $first; 
+               let last = $last; let even= $even; let odd=$odd;) {
+    <h1>Count is {{count}}</h1>
+    <h1>Index is {{index}}</h1>
+    <h1>first is {{first}}</h1>
+    <app-course-card (courseSelected)="onCardClicked($event)"[course]="courseOne"></app-course-card> 
+}
+@empty {
+    <h1>No courses found</h1>
+}

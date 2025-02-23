@@ -39,6 +39,7 @@ Data Flow
 6. AppComponent passes serverElements to ServerElementComponent using [element] binding.
 7. ServerElementComponent displays each item.
 
+![alt text](image.png)
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.4.
 
