@@ -1,0 +1,11 @@
+<div class="container">
+  <h1 class="text-center my-4">Product Management</h1>
+
+  <!-- Add Product Component -->
+  <app-add-product (productAdded)="addProduct($event)"></app-add-product>
+
+  <div class="row">
+    <div class="col-md-4" *ngFor="let product of products">
+      <app-products [product]="product"></app-products>
+    </div>
+  </div>

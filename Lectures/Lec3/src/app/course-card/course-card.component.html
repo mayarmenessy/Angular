@@ -1,12 +1,17 @@
 <div class="container mt-4">
     <div class="card" style="width: 18rem;">
-        @if ((course.iconUrl)) {
+      <!-- @if ((course.iconUrl)) {
             <img [src]="course.iconUrl" class="card-img-top" alt="Card Image">
 
         }
         @else{
             <h1>No image Found</h1>
         }
+                    <ng-content select="img"></ng-content>
+   
+        --> 
+            <ng-content></ng-content>
+
         <div class="card-body">
            <!-- <h5 class="card-title" [ngClass]="course.category=='BEGINNER'? 'begginer': ''">{{course.description}}</h5> -->
             <h5 class="card-title" [ngStyle]="{'text-decoration':'underline'}" [ngClass]="cardClasses()">{{course.description}}</h5>
