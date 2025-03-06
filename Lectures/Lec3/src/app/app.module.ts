@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { CoreComponent } from './core/core.component';
 import { ServerElementComponent } from './server-element/server-element.component';
 import { CourseCardComponent } from './course-card/course-card.component';
+import { CourseImageComponent } from './course-image/course-image.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoreComponent,
     ServerElementComponent,
-    CourseCardComponent
+    CourseCardComponent,
+    CourseImageComponent
   ],
   imports: [
     BrowserModule,
