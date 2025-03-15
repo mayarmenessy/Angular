@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren, ViewEncapsulation } from '@angular/core';
 import { courses } from './Data/db-data';
 import { ICourse } from '../../../models/course';
 import { CourseCardComponent } from './course-card/course-card.component';
@@ -7,7 +7,8 @@ import { CourseCardComponent } from './course-card/course-card.component';
   selector: 'app-root',
   templateUrl: './app.component.html',
   standalone: false,
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  encapsulation:ViewEncapsulation.None // we removed the attribute
 })
 export class AppComponent implements OnInit, AfterViewInit{
 
@@ -26,7 +27,9 @@ export class AppComponent implements OnInit, AfterViewInit{
     console.log(course.description)  
     console.log("card", this.card)
    }
-
+onToggle(isHighlighted:boolean){
+  console.log(isHighlighted)
+}
    ngOnInit(): void {
     //console.log("card", this.card)
   }
